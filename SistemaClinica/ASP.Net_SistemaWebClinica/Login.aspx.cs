@@ -13,5 +13,21 @@ namespace ASP.Net_SistemaWebClinica
         {
 
         }
+
+        protected void btnIngresar_Click(object sender, EventArgs e)
+        {
+            string user = txtUsuario.Text;
+            string password = txtPassword.Text;
+            string userName = "edsolano";
+            string passName = "1234";
+            if(user.Equals (userName) && password.Equals(passName))
+            {
+                Response.Write("<script>alert('USUARIO CORRECTO')</script>");
+            }
+            else
+            {
+                Response.Write("<script>alert('USUARIO INCORRECTO')</script>");
+            }
+        }
     }
 }
